@@ -48,6 +48,8 @@
     <Reference Include="System.Data.SqlClient, Version=4.6.1.5, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SqlClient.4.8.5\lib\net461\System.Data.SqlClient.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,6 +61,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Album.cs">
+      <DependentUpon>ModelDB_MusicStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Artist.cs">
+      <DependentUpon>ModelDB_MusicStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Band.cs">
+      <DependentUpon>ModelDB_MusicStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Business.cs">
+      <DependentUpon>ModelDB_MusicStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>ModelDB_MusicStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormArtists_EF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormArtists_EF.Designer.cs">
+      <DependentUpon>FormArtists_EF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,9 +112,39 @@
     <Compile Include="Forms\FormArtists.Designer.cs">
       <DependentUpon>FormArtists.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModelDB_MusicStore.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDB_MusicStore.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDB_MusicStore.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDB_MusicStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDB_MusicStore.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDB_MusicStore.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Private.cs">
+      <DependentUpon>ModelDB_MusicStore.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase.cs">
+      <DependentUpon>ModelDB_MusicStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Solo.cs">
+      <DependentUpon>ModelDB_MusicStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Song.cs">
+      <DependentUpon>ModelDB_MusicStore.tt</DependentUpon>
+    </Compile>
     <Compile Include="ThemeColor.cs" />
+    <EmbeddedResource Include="Forms\FormArtists_EF.resx">
+      <DependentUpon>FormArtists_EF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormMainMenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +170,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="ModelDB_MusicStore.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelDB_MusicStore.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelDB_MusicStore.edmx.diagram">
+      <DependentUpon>ModelDB_MusicStore.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -151,6 +211,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-infinity-loop-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelDB_MusicStore.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDB_MusicStore.edmx</DependentUpon>
+      <LastGenOutput>ModelDB_MusicStore.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDB_MusicStore.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDB_MusicStore.edmx</DependentUpon>
+      <LastGenOutput>ModelDB_MusicStore.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MusicStoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Album">
+          <Key>
+            <PropertyRef Name="album_id" />
+          </Key>
+          <Property Name="album_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="artist_id" Type="bigint" Nullable="false" />
+          <Property Name="album_title" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="genre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="publ_year" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="record_label" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="price" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Artist">
+          <Key>
+            <PropertyRef Name="artist_id" />
+          </Key>
+          <Property Name="artist_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="artist_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="artist_origin" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="website" Type="varchar" MaxLength="225" />
+          <Property Name="social" Type="varchar" MaxLength="225" />
+          <Property Name="is_band" Type="bit" Nullable="false" />
+          <Property Name="is_active" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Band">
+          <Key>
+            <PropertyRef Name="band_id" />
+          </Key>
+          <Property Name="band_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="artist_id" Type="bigint" Nullable="false" />
+          <Property Name="members" Type="smallint" Nullable="false" />
+          <Property Name="form_year" Type="varchar" MaxLength="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Business">
+          <Key>
+            <PropertyRef Name="business_id" />
+          </Key>
+          <Property Name="business_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="customer_id" Type="bigint" Nullable="false" />
+          <Property Name="vat_number" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="customer_id" />
+          </Key>
+          <Property Name="customer_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="customer_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="customer_address" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="phone_number" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="is_business" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Private">
+          <Key>
+            <PropertyRef Name="private_id" />
+          </Key>
+          <Property Name="private_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="customer_id" Type="bigint" Nullable="false" />
+          <Property Name="first_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="last_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="age" Type="smallint" Nullable="false" />
+          <Property Name="tax_code" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Purchase">
+          <Key>
+            <PropertyRef Name="purchase_id" />
+          </Key>
+          <Property Name="purchase_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="album_id" Type="bigint" Nullable="false" />
+          <Property Name="customer_id" Type="bigint" Nullable="false" />
+          <Property Name="purchased_amount" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="total_paid" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Solo">
+          <Key>
+            <PropertyRef Name="solo_id" />
+          </Key>
+          <Property Name="solo_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="artist_id" Type="bigint" Nullable="false" />
+          <Property Name="gender" Type="char" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Song">
+          <Key>
+            <PropertyRef Name="song_id" />
+          </Key>
+          <Property Name="song_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="album_id" Type="bigint" Nullable="false" />
+          <Property Name="song_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="song_duration" Type="varchar" MaxLength="5" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Album_Artist">
+          <End Role="Artist" Type="Self.Artist" Multiplicity="1" />
+          <End Role="Album" Type="Self.Album" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Artist">
+              <PropertyRef Name="artist_id" />
+            </Principal>
+            <Dependent Role="Album">
+              <PropertyRef Name="artist_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Band_Artist">
+          <End Role="Artist" Type="Self.Artist" Multiplicity="1" />
+          <End Role="Band" Type="Self.Band" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Artist">
+              <PropertyRef Name="artist_id" />
+            </Principal>
+            <Dependent Role="Band">
+              <PropertyRef Name="artist_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Business_Customer">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Business" Type="Self.Business" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="customer_id" />
+            </Principal>
+            <Dependent Role="Business">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Private_Customer">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Private" Type="Self.Private" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="customer_id" />
+            </Principal>
+            <Dependent Role="Private">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Purchase_Album">
+          <End Role="Album" Type="Self.Album" Multiplicity="1" />
+          <End Role="Purchase" Type="Self.Purchase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Album">
+              <PropertyRef Name="album_id" />
+            </Principal>
+            <Dependent Role="Purchase">
+              <PropertyRef Name="album_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Purchase_Customer">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Purchase" Type="Self.Purchase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="customer_id" />
+            </Principal>
+            <Dependent Role="Purchase">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Solo_Artist">
+          <End Role="Artist" Type="Self.Artist" Multiplicity="1" />
+          <End Role="Solo" Type="Self.Solo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Artist">
+              <PropertyRef Name="artist_id" />
+            </Principal>
+            <Dependent Role="Solo">
+              <PropertyRef Name="artist_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Song_Album">
+          <End Role="Album" Type="Self.Album" Multiplicity="1" />
+          <End Role="Song" Type="Self.Song" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Album">
+              <PropertyRef Name="album_id" />
+            </Principal>
+            <Dependent Role="Song">
+              <PropertyRef Name="album_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MusicStoreModelStoreContainer">
+          <EntitySet Name="Album" EntityType="Self.Album" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Artist" EntityType="Self.Artist" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Band" EntityType="Self.Band" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Business" EntityType="Self.Business" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Private" EntityType="Self.Private" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Purchase" EntityType="Self.Purchase" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Solo" EntityType="Self.Solo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Song" EntityType="Self.Song" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Album_Artist" Association="Self.FK_Album_Artist">
+            <End Role="Artist" EntitySet="Artist" />
+            <End Role="Album" EntitySet="Album" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Band_Artist" Association="Self.FK_Band_Artist">
+            <End Role="Artist" EntitySet="Artist" />
+            <End Role="Band" EntitySet="Band" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Business_Customer" Association="Self.FK_Business_Customer">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Business" EntitySet="Business" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Private_Customer" Association="Self.FK_Private_Customer">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Private" EntitySet="Private" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Purchase_Album" Association="Self.FK_Purchase_Album">
+            <End Role="Album" EntitySet="Album" />
+            <End Role="Purchase" EntitySet="Purchase" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Purchase_Customer" Association="Self.FK_Purchase_Customer">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Purchase" EntitySet="Purchase" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Solo_Artist" Association="Self.FK_Solo_Artist">
+            <End Role="Artist" EntitySet="Artist" />
+            <End Role="Solo" EntitySet="Solo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Song_Album" Association="Self.FK_Song_Album">
+            <End Role="Album" EntitySet="Album" />
+            <End Role="Song" EntitySet="Song" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MusicStoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Album">
+          <Key>
+            <PropertyRef Name="album_id" />
+          </Key>
+          <Property Name="album_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="artist_id" Type="Int64" Nullable="false" />
+          <Property Name="album_title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="genre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="publ_year" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="record_label" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="price" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Artist" Relationship="Self.FK_Album_Artist" FromRole="Album" ToRole="Artist" />
+          <NavigationProperty Name="Purchases" Relationship="Self.FK_Purchase_Album" FromRole="Album" ToRole="Purchase" />
+          <NavigationProperty Name="Songs" Relationship="Self.FK_Song_Album" FromRole="Album" ToRole="Song" />
+        </EntityType>
+        <EntityType Name="Artist">
+          <Key>
+            <PropertyRef Name="artist_id" />
+          </Key>
+          <Property Name="artist_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="artist_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="artist_origin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="website" Type="String" MaxLength="225" FixedLength="false" Unicode="false" />
+          <Property Name="social" Type="String" MaxLength="225" FixedLength="false" Unicode="false" />
+          <Property Name="is_band" Type="Boolean" Nullable="false" />
+          <Property Name="is_active" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Albums" Relationship="Self.FK_Album_Artist" FromRole="Artist" ToRole="Album" />
+          <NavigationProperty Name="Bands" Relationship="Self.FK_Band_Artist" FromRole="Artist" ToRole="Band" />
+          <NavigationProperty Name="Soli" Relationship="Self.FK_Solo_Artist" FromRole="Artist" ToRole="Solo" />
+        </EntityType>
+        <EntityType Name="Band">
+          <Key>
+            <PropertyRef Name="band_id" />
+          </Key>
+          <Property Name="band_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="artist_id" Type="Int64" Nullable="false" />
+          <Property Name="members" Type="Int16" Nullable="false" />
+          <Property Name="form_year" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Artist" Relationship="Self.FK_Band_Artist" FromRole="Band" ToRole="Artist" />
+        </EntityType>
+        <EntityType Name="Business">
+          <Key>
+            <PropertyRef Name="business_id" />
+          </Key>
+          <Property Name="business_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="customer_id" Type="Int64" Nullable="false" />
+          <Property Name="vat_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Customer" Relationship="Self.FK_Business_Customer" FromRole="Business" ToRole="Customer" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="customer_id" />
+          </Key>
+          <Property Name="customer_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="customer_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="customer_address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="phone_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="is_business" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Businesses" Relationship="Self.FK_Business_Customer" FromRole="Customer" ToRole="Business" />
+          <NavigationProperty Name="Privates" Relationship="Self.FK_Private_Customer" FromRole="Customer" ToRole="Private" />
+          <NavigationProperty Name="Purchases" Relationship="Self.FK_Purchase_Customer" FromRole="Customer" ToRole="Purchase" />
+        </EntityType>
+        <EntityType Name="Private">
+          <Key>
+            <PropertyRef Name="private_id" />
+          </Key>
+          <Property Name="private_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="customer_id" Type="Int64" Nullable="false" />
+          <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="age" Type="Int16" Nullable="false" />
+          <Property Name="tax_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Customer" Relationship="Self.FK_Private_Customer" FromRole="Private" ToRole="Customer" />
+        </EntityType>
+        <EntityType Name="Purchase">
+          <Key>
+            <PropertyRef Name="purchase_id" />
+          </Key>
+          <Property Name="purchase_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="album_id" Type="Int64" Nullable="false" />
+          <Property Name="customer_id" Type="Int64" Nullable="false" />
+          <Property Name="purchased_amount" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="total_paid" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Album" Relationship="Self.FK_Purchase_Album" FromRole="Purchase" ToRole="Album" />
+          <NavigationProperty Name="Customer" Relationship="Self.FK_Purchase_Customer" FromRole="Purchase" ToRole="Customer" />
+        </EntityType>
+        <EntityType Name="Solo">
+          <Key>
+            <PropertyRef Name="solo_id" />
+          </Key>
+          <Property Name="solo_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="artist_id" Type="Int64" Nullable="false" />
+          <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Artist" Relationship="Self.FK_Solo_Artist" FromRole="Solo" ToRole="Artist" />
+        </EntityType>
+        <EntityType Name="Song">
+          <Key>
+            <PropertyRef Name="song_id" />
+          </Key>
+          <Property Name="song_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="album_id" Type="Int64" Nullable="false" />
+          <Property Name="song_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="song_duration" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Album" Relationship="Self.FK_Song_Album" FromRole="Song" ToRole="Album" />
+        </EntityType>
+        <Association Name="FK_Album_Artist">
+          <End Role="Artist" Type="Self.Artist" Multiplicity="1" />
+          <End Role="Album" Type="Self.Album" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Artist">
+              <PropertyRef Name="artist_id" />
+            </Principal>
+            <Dependent Role="Album">
+              <PropertyRef Name="artist_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Purchase_Album">
+          <End Role="Album" Type="Self.Album" Multiplicity="1" />
+          <End Role="Purchase" Type="Self.Purchase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Album">
+              <PropertyRef Name="album_id" />
+            </Principal>
+            <Dependent Role="Purchase">
+              <PropertyRef Name="album_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Song_Album">
+          <End Role="Album" Type="Self.Album" Multiplicity="1" />
+          <End Role="Song" Type="Self.Song" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Album">
+              <PropertyRef Name="album_id" />
+            </Principal>
+            <Dependent Role="Song">
+              <PropertyRef Name="album_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Band_Artist">
+          <End Role="Artist" Type="Self.Artist" Multiplicity="1" />
+          <End Role="Band" Type="Self.Band" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Artist">
+              <PropertyRef Name="artist_id" />
+            </Principal>
+            <Dependent Role="Band">
+              <PropertyRef Name="artist_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Solo_Artist">
+          <End Role="Artist" Type="Self.Artist" Multiplicity="1" />
+          <End Role="Solo" Type="Self.Solo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Artist">
+              <PropertyRef Name="artist_id" />
+            </Principal>
+            <Dependent Role="Solo">
+              <PropertyRef Name="artist_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Business_Customer">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Business" Type="Self.Business" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="customer_id" />
+            </Principal>
+            <Dependent Role="Business">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Private_Customer">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Private" Type="Self.Private" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="customer_id" />
+            </Principal>
+            <Dependent Role="Private">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Purchase_Customer">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Purchase" Type="Self.Purchase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="customer_id" />
+            </Principal>
+            <Dependent Role="Purchase">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MusicStoreEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Albums" EntityType="Self.Album" />
+          <EntitySet Name="Artists" EntityType="Self.Artist" />
+          <EntitySet Name="Bands" EntityType="Self.Band" />
+          <EntitySet Name="Businesses" EntityType="Self.Business" />
+          <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="Privates" EntityType="Self.Private" />
+          <EntitySet Name="Purchases" EntityType="Self.Purchase" />
+          <EntitySet Name="Soli" EntityType="Self.Solo" />
+          <EntitySet Name="Songs" EntityType="Self.Song" />
+          <AssociationSet Name="FK_Album_Artist" Association="Self.FK_Album_Artist">
+            <End Role="Artist" EntitySet="Artists" />
+            <End Role="Album" EntitySet="Albums" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Purchase_Album" Association="Self.FK_Purchase_Album">
+            <End Role="Album" EntitySet="Albums" />
+            <End Role="Purchase" EntitySet="Purchases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Song_Album" Association="Self.FK_Song_Album">
+            <End Role="Album" EntitySet="Albums" />
+            <End Role="Song" EntitySet="Songs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Band_Artist" Association="Self.FK_Band_Artist">
+            <End Role="Artist" EntitySet="Artists" />
+            <End Role="Band" EntitySet="Bands" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Solo_Artist" Association="Self.FK_Solo_Artist">
+            <End Role="Artist" EntitySet="Artists" />
+            <End Role="Solo" EntitySet="Soli" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Business_Customer" Association="Self.FK_Business_Customer">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="Business" EntitySet="Businesses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Private_Customer" Association="Self.FK_Private_Customer">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="Private" EntitySet="Privates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Purchase_Customer" Association="Self.FK_Purchase_Customer">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="Purchase" EntitySet="Purchases" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MusicStoreModelStoreContainer" CdmEntityContainer="MusicStoreEntities">
+          <EntitySetMapping Name="Albums">
+            <EntityTypeMapping TypeName="MusicStoreModel.Album">
+              <MappingFragment StoreEntitySet="Album">
+                <ScalarProperty Name="album_id" ColumnName="album_id" />
+                <ScalarProperty Name="artist_id" ColumnName="artist_id" />
+                <ScalarProperty Name="album_title" ColumnName="album_title" />
+                <ScalarProperty Name="genre" ColumnName="genre" />
+                <ScalarProperty Name="publ_year" ColumnName="publ_year" />
+                <ScalarProperty Name="record_label" ColumnName="record_label" />
+                <ScalarProperty Name="price" ColumnName="price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Artists">
+            <EntityTypeMapping TypeName="MusicStoreModel.Artist">
+              <MappingFragment StoreEntitySet="Artist">
+                <ScalarProperty Name="artist_id" ColumnName="artist_id" />
+                <ScalarProperty Name="artist_name" ColumnName="artist_name" />
+                <ScalarProperty Name="artist_origin" ColumnName="artist_origin" />
+                <ScalarProperty Name="website" ColumnName="website" />
+                <ScalarProperty Name="social" ColumnName="social" />
+                <ScalarProperty Name="is_band" ColumnName="is_band" />
+                <ScalarProperty Name="is_active" ColumnName="is_active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bands">
+            <EntityTypeMapping TypeName="MusicStoreModel.Band">
+              <MappingFragment StoreEntitySet="Band">
+                <ScalarProperty Name="band_id" ColumnName="band_id" />
+                <ScalarProperty Name="artist_id" ColumnName="artist_id" />
+                <ScalarProperty Name="members" ColumnName="members" />
+                <ScalarProperty Name="form_year" ColumnName="form_year" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Businesses">
+            <EntityTypeMapping TypeName="MusicStoreModel.Business">
+              <MappingFragment StoreEntitySet="Business">
+                <ScalarProperty Name="business_id" ColumnName="business_id" />
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+                <ScalarProperty Name="vat_number" ColumnName="vat_number" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="MusicStoreModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+                <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+                <ScalarProperty Name="customer_address" ColumnName="customer_address" />
+                <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="is_business" ColumnName="is_business" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Privates">
+            <EntityTypeMapping TypeName="MusicStoreModel.Private">
+              <MappingFragment StoreEntitySet="Private">
+                <ScalarProperty Name="private_id" ColumnName="private_id" />
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+                <ScalarProperty Name="first_name" ColumnName="first_name" />
+                <ScalarProperty Name="last_name" ColumnName="last_name" />
+                <ScalarProperty Name="age" ColumnName="age" />
+                <ScalarProperty Name="tax_code" ColumnName="tax_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Purchases">
+            <EntityTypeMapping TypeName="MusicStoreModel.Purchase">
+              <MappingFragment StoreEntitySet="Purchase">
+                <ScalarProperty Name="purchase_id" ColumnName="purchase_id" />
+                <ScalarProperty Name="album_id" ColumnName="album_id" />
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+                <ScalarProperty Name="purchased_amount" ColumnName="purchased_amount" />
+                <ScalarProperty Name="total_paid" ColumnName="total_paid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Soli">
+            <EntityTypeMapping TypeName="MusicStoreModel.Solo">
+              <MappingFragment StoreEntitySet="Solo">
+                <ScalarProperty Name="solo_id" ColumnName="solo_id" />
+                <ScalarProperty Name="artist_id" ColumnName="artist_id" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Songs">
+            <EntityTypeMapping TypeName="MusicStoreModel.Song">
+              <MappingFragment StoreEntitySet="Song">
+                <ScalarProperty Name="song_id" ColumnName="song_id" />
+                <ScalarProperty Name="album_id" ColumnName="album_id" />
+                <ScalarProperty Name="song_name" ColumnName="song_name" />
+                <ScalarProperty Name="song_duration" ColumnName="song_duration" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

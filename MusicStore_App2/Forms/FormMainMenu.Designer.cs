@@ -69,10 +69,10 @@
             this.btnOrders.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnOrders.Image = global::MusicStore_App2.Properties.Resources.icons8_purchase_order_24;
             this.btnOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrders.Location = new System.Drawing.Point(0, 326);
+            this.btnOrders.Location = new System.Drawing.Point(0, 320);
             this.btnOrders.Name = "btnOrders";
             this.btnOrders.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnOrders.Size = new System.Drawing.Size(220, 82);
+            this.btnOrders.Size = new System.Drawing.Size(220, 80);
             this.btnOrders.TabIndex = 4;
             this.btnOrders.Text = "  Orders";
             this.btnOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -89,10 +89,10 @@
             this.btnCustomers.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnCustomers.Image = global::MusicStore_App2.Properties.Resources.icons8_customer_24;
             this.btnCustomers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomers.Location = new System.Drawing.Point(0, 244);
+            this.btnCustomers.Location = new System.Drawing.Point(0, 240);
             this.btnCustomers.Name = "btnCustomers";
             this.btnCustomers.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnCustomers.Size = new System.Drawing.Size(220, 82);
+            this.btnCustomers.Size = new System.Drawing.Size(220, 80);
             this.btnCustomers.TabIndex = 3;
             this.btnCustomers.Text = "  Customers";
             this.btnCustomers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -109,10 +109,10 @@
             this.btnAlbums.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnAlbums.Image = global::MusicStore_App2.Properties.Resources.icons8_music_album_24;
             this.btnAlbums.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlbums.Location = new System.Drawing.Point(0, 162);
+            this.btnAlbums.Location = new System.Drawing.Point(0, 160);
             this.btnAlbums.Name = "btnAlbums";
             this.btnAlbums.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnAlbums.Size = new System.Drawing.Size(220, 82);
+            this.btnAlbums.Size = new System.Drawing.Size(220, 80);
             this.btnAlbums.TabIndex = 2;
             this.btnAlbums.Text = "  Albums";
             this.btnAlbums.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -132,7 +132,7 @@
             this.btnArtists.Location = new System.Drawing.Point(0, 80);
             this.btnArtists.Name = "btnArtists";
             this.btnArtists.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnArtists.Size = new System.Drawing.Size(220, 82);
+            this.btnArtists.Size = new System.Drawing.Size(220, 80);
             this.btnArtists.TabIndex = 1;
             this.btnArtists.Text = "  Artists";
             this.btnArtists.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -190,7 +190,7 @@
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnMinimize.Size = new System.Drawing.Size(47, 42);
-            this.btnMinimize.TabIndex = 3;
+            this.btnMinimize.TabIndex = 1;
             this.btnMinimize.Text = "O";
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
@@ -206,7 +206,7 @@
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnMaximize.Size = new System.Drawing.Size(47, 42);
-            this.btnMaximize.TabIndex = 4;
+            this.btnMaximize.TabIndex = 2;
             this.btnMaximize.Text = "O";
             this.btnMaximize.UseVisualStyleBackColor = true;
             this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
@@ -222,7 +222,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnClose.Size = new System.Drawing.Size(47, 42);
-            this.btnClose.TabIndex = 2;
+            this.btnClose.TabIndex = 3;
             this.btnClose.Text = "O";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
