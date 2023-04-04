@@ -1,6 +1,6 @@
 ﻿namespace MusicStore_App2.Forms
 {
-    partial class FormCustomer
+    partial class FormCustomers
     {
         /// <summary>
         /// Required designer variable.
@@ -107,7 +107,7 @@
             this.Controls.Add(this.dgvCustomer);
             this.Name = "FormCustomer";
             this.Text = "CUSTOMERS";
-            this.Load += new System.EventHandler(this.FormCustomer_Load);
+            this.Load += new System.EventHandler(this.FormCustomers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
             this.ResumeLayout(false);
 

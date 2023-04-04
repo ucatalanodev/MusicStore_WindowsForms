@@ -5,17 +5,17 @@ using System.Windows.Forms;
 
 namespace MusicStore_App2.Forms
 {
-    public partial class FormCustomer : Form
+    public partial class FormCustomers : Form
     {
         const string CONNECTION_STRING = @"Data Source=DESKTOP-URBANO;Initial Catalog=MusicStore;Trusted_connection=true;";
 
 
-        public FormCustomer()
+        public FormCustomers()
         {
             InitializeComponent();
         }
 
-        private void FormCustomer_Load(object sender, System.EventArgs e)
+        private void FormCustomers_Load(object sender, System.EventArgs e)
         {
             PopulateDataGridView();
         }
