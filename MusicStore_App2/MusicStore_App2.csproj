@@ -76,6 +76,12 @@
     <Compile Include="Customer.cs">
       <DependentUpon>ModelDB_MusicStore.tt</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormAlbums_EF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAlbums_EF.Designer.cs">
+      <DependentUpon>FormAlbums_EF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormArtists_EF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
       <DependentUpon>ModelDB_MusicStore.tt</DependentUpon>
     </Compile>
     <Compile Include="ThemeColor.cs" />
+    <EmbeddedResource Include="Forms\FormAlbums_EF.resx">
+      <DependentUpon>FormAlbums_EF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormArtists_EF.resx">
       <DependentUpon>FormArtists_EF.cs</DependentUpon>
     </EmbeddedResource>

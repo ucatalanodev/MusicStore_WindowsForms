@@ -142,7 +142,8 @@ namespace MusicStore_App2
 
         private void btnAlbums_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormAlbums(), sender);
+            //OpenChildForm(new Forms.FormAlbums(), sender);
+            OpenChildForm(new Forms.FormAlbums_EF(), sender);
         }
 
         private void btnCustomers_Click(object sender, EventArgs e)
