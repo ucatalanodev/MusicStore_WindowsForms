@@ -23,7 +23,7 @@ namespace MusicStore_App2.Forms
         void Clear()
         {
             tbCustomerName.Text = tbCustomerAddress.Text = tbPhoneNumber.Text = tbEmail.Text = ""; //Empties text boxes with an empty string
-            cbIsBusiness.Checked = false; //Unchecks checkboxes if previously checked
+            cbIsBusiness.Checked = false; //Unchecks checkbox if previously checked
             btnInsert.Text = "Save";
             btnDelete.ForeColor = System.Drawing.Color.Red;
             btnDelete.Enabled = false;

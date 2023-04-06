@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panCRUD = new System.Windows.Forms.Panel();
+            this.cbIsBusiness = new System.Windows.Forms.CheckBox();
+            this.lblCheckboxes = new System.Windows.Forms.Label();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -48,8 +50,6 @@
             this.tbcPhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbcEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbcIsBusiness = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.cbIsBusiness = new System.Windows.Forms.CheckBox();
-            this.lblCheckboxes = new System.Windows.Forms.Label();
             this.panCRUD.SuspendLayout();
             this.panDGV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
@@ -77,8 +77,31 @@
             this.panCRUD.Location = new System.Drawing.Point(0, 0);
             this.panCRUD.Margin = new System.Windows.Forms.Padding(4);
             this.panCRUD.Name = "panCRUD";
-            this.panCRUD.Size = new System.Drawing.Size(327, 759);
+            this.panCRUD.Size = new System.Drawing.Size(327, 723);
             this.panCRUD.TabIndex = 2;
+            // 
+            // cbIsBusiness
+            // 
+            this.cbIsBusiness.AutoSize = true;
+            this.cbIsBusiness.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbIsBusiness.Location = new System.Drawing.Point(157, 331);
+            this.cbIsBusiness.Margin = new System.Windows.Forms.Padding(4);
+            this.cbIsBusiness.Name = "cbIsBusiness";
+            this.cbIsBusiness.Size = new System.Drawing.Size(96, 27);
+            this.cbIsBusiness.TabIndex = 10;
+            this.cbIsBusiness.Text = "Business";
+            this.cbIsBusiness.UseVisualStyleBackColor = true;
+            // 
+            // lblCheckboxes
+            // 
+            this.lblCheckboxes.AutoSize = true;
+            this.lblCheckboxes.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCheckboxes.Location = new System.Drawing.Point(4, 331);
+            this.lblCheckboxes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCheckboxes.Name = "lblCheckboxes";
+            this.lblCheckboxes.Size = new System.Drawing.Size(145, 23);
+            this.lblCheckboxes.TabIndex = 9;
+            this.lblCheckboxes.Text = "Customer Status: ";
             // 
             // btnInsert
             // 
@@ -87,7 +110,7 @@
             this.btnInsert.FlatAppearance.BorderSize = 0;
             this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsert.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.btnInsert.Location = new System.Drawing.Point(0, 597);
+            this.btnInsert.Location = new System.Drawing.Point(0, 561);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(327, 54);
@@ -103,7 +126,7 @@
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.Location = new System.Drawing.Point(0, 651);
+            this.btnDelete.Location = new System.Drawing.Point(0, 615);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(327, 54);
@@ -119,7 +142,7 @@
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.Location = new System.Drawing.Point(0, 705);
+            this.btnCancel.Location = new System.Drawing.Point(0, 669);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(327, 54);
@@ -217,7 +240,7 @@
             this.panDGV.Location = new System.Drawing.Point(329, 0);
             this.panDGV.Margin = new System.Windows.Forms.Padding(4);
             this.panDGV.Name = "panDGV";
-            this.panDGV.Size = new System.Drawing.Size(1039, 759);
+            this.panDGV.Size = new System.Drawing.Size(1038, 723);
             this.panDGV.TabIndex = 3;
             // 
             // dgvCustomer
@@ -240,7 +263,7 @@
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.ReadOnly = true;
             this.dgvCustomer.RowHeadersWidth = 51;
-            this.dgvCustomer.Size = new System.Drawing.Size(1039, 759);
+            this.dgvCustomer.Size = new System.Drawing.Size(1038, 723);
             this.dgvCustomer.TabIndex = 14;
             this.dgvCustomer.DoubleClick += new System.EventHandler(this.dgvCustomer_DoubleClick);
             // 
@@ -260,6 +283,7 @@
             this.tbcCustomerName.HeaderText = "Customer Name";
             this.tbcCustomerName.MinimumWidth = 6;
             this.tbcCustomerName.Name = "tbcCustomerName";
+            this.tbcCustomerName.ReadOnly = true;
             this.tbcCustomerName.Width = 257;
             // 
             // tbcCustomerAddress
@@ -268,6 +292,7 @@
             this.tbcCustomerAddress.HeaderText = "Customer Address";
             this.tbcCustomerAddress.MinimumWidth = 6;
             this.tbcCustomerAddress.Name = "tbcCustomerAddress";
+            this.tbcCustomerAddress.ReadOnly = true;
             // 
             // tbcPhoneNumber
             // 
@@ -275,6 +300,7 @@
             this.tbcPhoneNumber.HeaderText = "Phone Number";
             this.tbcPhoneNumber.MinimumWidth = 6;
             this.tbcPhoneNumber.Name = "tbcPhoneNumber";
+            this.tbcPhoneNumber.ReadOnly = true;
             // 
             // tbcEmail
             // 
@@ -282,6 +308,7 @@
             this.tbcEmail.HeaderText = "E-Mail";
             this.tbcEmail.MinimumWidth = 6;
             this.tbcEmail.Name = "tbcEmail";
+            this.tbcEmail.ReadOnly = true;
             // 
             // cbcIsBusiness
             // 
@@ -289,36 +316,14 @@
             this.cbcIsBusiness.HeaderText = "Business";
             this.cbcIsBusiness.MinimumWidth = 6;
             this.cbcIsBusiness.Name = "cbcIsBusiness";
-            // 
-            // cbIsBusiness
-            // 
-            this.cbIsBusiness.AutoSize = true;
-            this.cbIsBusiness.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbIsBusiness.Location = new System.Drawing.Point(157, 331);
-            this.cbIsBusiness.Margin = new System.Windows.Forms.Padding(4);
-            this.cbIsBusiness.Name = "cbIsBusiness";
-            this.cbIsBusiness.Size = new System.Drawing.Size(96, 27);
-            this.cbIsBusiness.TabIndex = 10;
-            this.cbIsBusiness.Text = "Business";
-            this.cbIsBusiness.UseVisualStyleBackColor = true;
-            // 
-            // lblCheckboxes
-            // 
-            this.lblCheckboxes.AutoSize = true;
-            this.lblCheckboxes.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCheckboxes.Location = new System.Drawing.Point(4, 331);
-            this.lblCheckboxes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCheckboxes.Name = "lblCheckboxes";
-            this.lblCheckboxes.Size = new System.Drawing.Size(145, 23);
-            this.lblCheckboxes.TabIndex = 9;
-            this.lblCheckboxes.Text = "Customer Status: ";
+            this.cbcIsBusiness.ReadOnly = true;
             // 
             // FormCustomers_EF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(1368, 759);
+            this.ClientSize = new System.Drawing.Size(1367, 723);
             this.Controls.Add(this.panDGV);
             this.Controls.Add(this.panCRUD);
             this.Name = "FormCustomers_EF";
