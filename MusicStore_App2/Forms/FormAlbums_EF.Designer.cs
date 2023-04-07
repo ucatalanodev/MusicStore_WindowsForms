@@ -137,7 +137,7 @@
             // tbPrice
             // 
             this.tbPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPrice.Location = new System.Drawing.Point(4, 442);
+            this.tbPrice.Location = new System.Drawing.Point(4, 462);
             this.tbPrice.Margin = new System.Windows.Forms.Padding(4);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.Size = new System.Drawing.Size(317, 29);
@@ -146,7 +146,7 @@
             // tbRecordLabel
             // 
             this.tbRecordLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRecordLabel.Location = new System.Drawing.Point(4, 355);
+            this.tbRecordLabel.Location = new System.Drawing.Point(4, 375);
             this.tbRecordLabel.Margin = new System.Windows.Forms.Padding(4);
             this.tbRecordLabel.Name = "tbRecordLabel";
             this.tbRecordLabel.Size = new System.Drawing.Size(317, 29);
@@ -155,7 +155,7 @@
             // tbPublYear
             // 
             this.tbPublYear.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPublYear.Location = new System.Drawing.Point(4, 268);
+            this.tbPublYear.Location = new System.Drawing.Point(4, 288);
             this.tbPublYear.Margin = new System.Windows.Forms.Padding(4);
             this.tbPublYear.Name = "tbPublYear";
             this.tbPublYear.Size = new System.Drawing.Size(317, 29);
@@ -165,7 +165,7 @@
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(4, 418);
+            this.lblPrice.Location = new System.Drawing.Point(4, 438);
             this.lblPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(47, 23);
@@ -176,7 +176,7 @@
             // 
             this.lblRecordLabel.AutoSize = true;
             this.lblRecordLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordLabel.Location = new System.Drawing.Point(4, 331);
+            this.lblRecordLabel.Location = new System.Drawing.Point(4, 351);
             this.lblRecordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRecordLabel.Name = "lblRecordLabel";
             this.lblRecordLabel.Size = new System.Drawing.Size(109, 23);
@@ -187,7 +187,7 @@
             // 
             this.lblPublYear.AutoSize = true;
             this.lblPublYear.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPublYear.Location = new System.Drawing.Point(4, 244);
+            this.lblPublYear.Location = new System.Drawing.Point(4, 264);
             this.lblPublYear.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPublYear.Name = "lblPublYear";
             this.lblPublYear.Size = new System.Drawing.Size(132, 23);
@@ -197,7 +197,7 @@
             // tbGenre
             // 
             this.tbGenre.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbGenre.Location = new System.Drawing.Point(4, 187);
+            this.tbGenre.Location = new System.Drawing.Point(4, 207);
             this.tbGenre.Margin = new System.Windows.Forms.Padding(4);
             this.tbGenre.Name = "tbGenre";
             this.tbGenre.Size = new System.Drawing.Size(317, 29);
@@ -207,7 +207,7 @@
             // 
             this.lblGenre.AutoSize = true;
             this.lblGenre.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenre.Location = new System.Drawing.Point(4, 162);
+            this.lblGenre.Location = new System.Drawing.Point(4, 182);
             this.lblGenre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGenre.Name = "lblGenre";
             this.lblGenre.Size = new System.Drawing.Size(56, 23);
@@ -217,7 +217,7 @@
             // tbAlbumTitle
             // 
             this.tbAlbumTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAlbumTitle.Location = new System.Drawing.Point(4, 106);
+            this.tbAlbumTitle.Location = new System.Drawing.Point(4, 126);
             this.tbAlbumTitle.Margin = new System.Windows.Forms.Padding(4);
             this.tbAlbumTitle.Name = "tbAlbumTitle";
             this.tbAlbumTitle.Size = new System.Drawing.Size(317, 29);
@@ -227,7 +227,7 @@
             // 
             this.lblAlbumTitle.AutoSize = true;
             this.lblAlbumTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlbumTitle.Location = new System.Drawing.Point(4, 81);
+            this.lblAlbumTitle.Location = new System.Drawing.Point(4, 101);
             this.lblAlbumTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAlbumTitle.Name = "lblAlbumTitle";
             this.lblAlbumTitle.Size = new System.Drawing.Size(97, 23);
@@ -237,7 +237,7 @@
             // tbArtistID
             // 
             this.tbArtistID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbArtistID.Location = new System.Drawing.Point(4, 25);
+            this.tbArtistID.Location = new System.Drawing.Point(4, 45);
             this.tbArtistID.Margin = new System.Windows.Forms.Padding(4);
             this.tbArtistID.Name = "tbArtistID";
             this.tbArtistID.Size = new System.Drawing.Size(317, 29);
@@ -247,7 +247,7 @@
             // 
             this.lblArtistID.AutoSize = true;
             this.lblArtistID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArtistID.Location = new System.Drawing.Point(4, 0);
+            this.lblArtistID.Location = new System.Drawing.Point(4, 20);
             this.lblArtistID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblArtistID.Name = "lblArtistID";
             this.lblArtistID.Size = new System.Drawing.Size(72, 23);
@@ -306,6 +306,7 @@
             this.tbcArtistID.HeaderText = "Artist ID";
             this.tbcArtistID.MinimumWidth = 6;
             this.tbcArtistID.Name = "tbcArtistID";
+            this.tbcArtistID.ReadOnly = true;
             this.tbcArtistID.Width = 125;
             // 
             // tbcAlbumTitle
@@ -314,6 +315,7 @@
             this.tbcAlbumTitle.HeaderText = "Album Title";
             this.tbcAlbumTitle.MinimumWidth = 6;
             this.tbcAlbumTitle.Name = "tbcAlbumTitle";
+            this.tbcAlbumTitle.ReadOnly = true;
             // 
             // tbcGenre
             // 
@@ -321,6 +323,7 @@
             this.tbcGenre.HeaderText = "Genre";
             this.tbcGenre.MinimumWidth = 6;
             this.tbcGenre.Name = "tbcGenre";
+            this.tbcGenre.ReadOnly = true;
             // 
             // tbcPublYear
             // 
@@ -328,6 +331,7 @@
             this.tbcPublYear.HeaderText = "Publication Year";
             this.tbcPublYear.MinimumWidth = 6;
             this.tbcPublYear.Name = "tbcPublYear";
+            this.tbcPublYear.ReadOnly = true;
             // 
             // tbcRecordLabel
             // 
@@ -335,6 +339,7 @@
             this.tbcRecordLabel.HeaderText = "Record Label";
             this.tbcRecordLabel.MinimumWidth = 6;
             this.tbcRecordLabel.Name = "tbcRecordLabel";
+            this.tbcRecordLabel.ReadOnly = true;
             this.tbcRecordLabel.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.tbcRecordLabel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
@@ -344,6 +349,7 @@
             this.tbcPrice.HeaderText = "Price";
             this.tbcPrice.MinimumWidth = 6;
             this.tbcPrice.Name = "tbcPrice";
+            this.tbcPrice.ReadOnly = true;
             this.tbcPrice.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.tbcPrice.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 

@@ -44,6 +44,7 @@
             this.cbIsBand = new System.Windows.Forms.CheckBox();
             this.cbIsActive = new System.Windows.Forms.CheckBox();
             this.tbSocial = new System.Windows.Forms.TextBox();
+            this.lblCheckboxes = new System.Windows.Forms.Label();
             this.lblSocial = new System.Windows.Forms.Label();
             this.tbWebsite = new System.Windows.Forms.TextBox();
             this.lblWebsite = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.lblArtistOrigin = new System.Windows.Forms.Label();
             this.tbArtistName = new System.Windows.Forms.TextBox();
             this.lblArtistName = new System.Windows.Forms.Label();
-            this.lblCheckboxes = new System.Windows.Forms.Label();
             this.panDGV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtist)).BeginInit();
             this.panCRUD.SuspendLayout();
@@ -64,7 +64,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panDGV.Controls.Add(this.dgvArtist);
             this.panDGV.Location = new System.Drawing.Point(329, 0);
-            this.panDGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panDGV.Margin = new System.Windows.Forms.Padding(4);
             this.panDGV.Name = "panDGV";
             this.panDGV.Size = new System.Drawing.Size(1007, 758);
             this.panDGV.TabIndex = 0;
@@ -86,7 +86,7 @@
             this.cbcIsActive});
             this.dgvArtist.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvArtist.Location = new System.Drawing.Point(0, 0);
-            this.dgvArtist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvArtist.Margin = new System.Windows.Forms.Padding(4);
             this.dgvArtist.Name = "dgvArtist";
             this.dgvArtist.ReadOnly = true;
             this.dgvArtist.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -179,7 +179,7 @@
             this.panCRUD.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panCRUD.ForeColor = System.Drawing.Color.White;
             this.panCRUD.Location = new System.Drawing.Point(0, 0);
-            this.panCRUD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panCRUD.Margin = new System.Windows.Forms.Padding(4);
             this.panCRUD.Name = "panCRUD";
             this.panCRUD.Size = new System.Drawing.Size(327, 758);
             this.panCRUD.TabIndex = 0;
@@ -192,7 +192,7 @@
             this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsert.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.btnInsert.Location = new System.Drawing.Point(0, 596);
-            this.btnInsert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(327, 54);
             this.btnInsert.TabIndex = 6;
@@ -208,7 +208,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.btnDelete.Location = new System.Drawing.Point(0, 650);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(327, 54);
             this.btnDelete.TabIndex = 7;
@@ -224,7 +224,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.btnCancel.Location = new System.Drawing.Point(0, 704);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(327, 54);
             this.btnCancel.TabIndex = 8;
@@ -236,8 +236,8 @@
             // 
             this.cbIsBand.AutoSize = true;
             this.cbIsBand.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbIsBand.Location = new System.Drawing.Point(123, 325);
-            this.cbIsBand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbIsBand.Location = new System.Drawing.Point(123, 345);
+            this.cbIsBand.Margin = new System.Windows.Forms.Padding(4);
             this.cbIsBand.Name = "cbIsBand";
             this.cbIsBand.Size = new System.Drawing.Size(71, 27);
             this.cbIsBand.TabIndex = 4;
@@ -248,8 +248,8 @@
             // 
             this.cbIsActive.AutoSize = true;
             this.cbIsActive.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbIsActive.Location = new System.Drawing.Point(211, 325);
-            this.cbIsActive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbIsActive.Location = new System.Drawing.Point(211, 345);
+            this.cbIsActive.Margin = new System.Windows.Forms.Padding(4);
             this.cbIsActive.Name = "cbIsActive";
             this.cbIsActive.Size = new System.Drawing.Size(79, 27);
             this.cbIsActive.TabIndex = 5;
@@ -259,17 +259,28 @@
             // tbSocial
             // 
             this.tbSocial.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSocial.Location = new System.Drawing.Point(4, 268);
-            this.tbSocial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSocial.Location = new System.Drawing.Point(4, 288);
+            this.tbSocial.Margin = new System.Windows.Forms.Padding(4);
             this.tbSocial.Name = "tbSocial";
             this.tbSocial.Size = new System.Drawing.Size(317, 29);
             this.tbSocial.TabIndex = 3;
+            // 
+            // lblCheckboxes
+            // 
+            this.lblCheckboxes.AutoSize = true;
+            this.lblCheckboxes.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCheckboxes.Location = new System.Drawing.Point(4, 347);
+            this.lblCheckboxes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCheckboxes.Name = "lblCheckboxes";
+            this.lblCheckboxes.Size = new System.Drawing.Size(111, 23);
+            this.lblCheckboxes.TabIndex = 0;
+            this.lblCheckboxes.Text = "Artist Status: ";
             // 
             // lblSocial
             // 
             this.lblSocial.AutoSize = true;
             this.lblSocial.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSocial.Location = new System.Drawing.Point(4, 244);
+            this.lblSocial.Location = new System.Drawing.Point(4, 264);
             this.lblSocial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSocial.Name = "lblSocial";
             this.lblSocial.Size = new System.Drawing.Size(54, 23);
@@ -279,8 +290,8 @@
             // tbWebsite
             // 
             this.tbWebsite.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbWebsite.Location = new System.Drawing.Point(4, 187);
-            this.tbWebsite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbWebsite.Location = new System.Drawing.Point(4, 207);
+            this.tbWebsite.Margin = new System.Windows.Forms.Padding(4);
             this.tbWebsite.Name = "tbWebsite";
             this.tbWebsite.Size = new System.Drawing.Size(317, 29);
             this.tbWebsite.TabIndex = 2;
@@ -289,7 +300,7 @@
             // 
             this.lblWebsite.AutoSize = true;
             this.lblWebsite.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWebsite.Location = new System.Drawing.Point(4, 162);
+            this.lblWebsite.Location = new System.Drawing.Point(4, 182);
             this.lblWebsite.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWebsite.Name = "lblWebsite";
             this.lblWebsite.Size = new System.Drawing.Size(71, 23);
@@ -299,8 +310,8 @@
             // tbArtistOrigin
             // 
             this.tbArtistOrigin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbArtistOrigin.Location = new System.Drawing.Point(4, 106);
-            this.tbArtistOrigin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbArtistOrigin.Location = new System.Drawing.Point(4, 126);
+            this.tbArtistOrigin.Margin = new System.Windows.Forms.Padding(4);
             this.tbArtistOrigin.Name = "tbArtistOrigin";
             this.tbArtistOrigin.Size = new System.Drawing.Size(317, 29);
             this.tbArtistOrigin.TabIndex = 1;
@@ -309,7 +320,7 @@
             // 
             this.lblArtistOrigin.AutoSize = true;
             this.lblArtistOrigin.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArtistOrigin.Location = new System.Drawing.Point(4, 81);
+            this.lblArtistOrigin.Location = new System.Drawing.Point(4, 101);
             this.lblArtistOrigin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblArtistOrigin.Name = "lblArtistOrigin";
             this.lblArtistOrigin.Size = new System.Drawing.Size(102, 23);
@@ -319,8 +330,8 @@
             // tbArtistName
             // 
             this.tbArtistName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbArtistName.Location = new System.Drawing.Point(4, 25);
-            this.tbArtistName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbArtistName.Location = new System.Drawing.Point(4, 45);
+            this.tbArtistName.Margin = new System.Windows.Forms.Padding(4);
             this.tbArtistName.Name = "tbArtistName";
             this.tbArtistName.Size = new System.Drawing.Size(317, 29);
             this.tbArtistName.TabIndex = 0;
@@ -329,23 +340,12 @@
             // 
             this.lblArtistName.AutoSize = true;
             this.lblArtistName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArtistName.Location = new System.Drawing.Point(4, 0);
+            this.lblArtistName.Location = new System.Drawing.Point(4, 20);
             this.lblArtistName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblArtistName.Name = "lblArtistName";
             this.lblArtistName.Size = new System.Drawing.Size(101, 23);
             this.lblArtistName.TabIndex = 1;
             this.lblArtistName.Text = "Artist Name";
-            // 
-            // lblCheckboxes
-            // 
-            this.lblCheckboxes.AutoSize = true;
-            this.lblCheckboxes.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCheckboxes.Location = new System.Drawing.Point(4, 327);
-            this.lblCheckboxes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCheckboxes.Name = "lblCheckboxes";
-            this.lblCheckboxes.Size = new System.Drawing.Size(111, 23);
-            this.lblCheckboxes.TabIndex = 0;
-            this.lblCheckboxes.Text = "Artist Status: ";
             // 
             // FormArtists_EF
             // 
@@ -355,7 +355,7 @@
             this.ClientSize = new System.Drawing.Size(1336, 758);
             this.Controls.Add(this.panCRUD);
             this.Controls.Add(this.panDGV);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormArtists_EF";
             this.Text = "ARTISTS";
             this.Load += new System.EventHandler(this.FormArtists_EF_Load);

@@ -124,6 +124,12 @@
     <Compile Include="Forms\FormArtists.Designer.cs">
       <DependentUpon>FormArtists.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormOrders_EF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormOrders_EF.Designer.cs">
+      <DependentUpon>FormOrders_EF.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModelDB_MusicStore.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormArtists.resx">
       <DependentUpon>FormArtists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormOrders_EF.resx">
+      <DependentUpon>FormOrders_EF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

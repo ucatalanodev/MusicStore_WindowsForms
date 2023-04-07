@@ -154,7 +154,8 @@ namespace MusicStore_App2
 
         private void btnOrders_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormOrders(), sender);
+            //OpenChildForm(new Forms.FormOrders(), sender);
+            OpenChildForm(new Forms.FormOrders_EF(), sender);
         }
     }
 }
