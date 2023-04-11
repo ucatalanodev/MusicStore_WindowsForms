@@ -75,19 +75,17 @@
             this.panCRUD.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panCRUD.ForeColor = System.Drawing.Color.White;
             this.panCRUD.Location = new System.Drawing.Point(0, 0);
-            this.panCRUD.Margin = new System.Windows.Forms.Padding(4);
             this.panCRUD.Name = "panCRUD";
-            this.panCRUD.Size = new System.Drawing.Size(327, 757);
+            this.panCRUD.Size = new System.Drawing.Size(245, 615);
             this.panCRUD.TabIndex = 2;
             // 
             // cbIsBusiness
             // 
             this.cbIsBusiness.AutoSize = true;
             this.cbIsBusiness.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbIsBusiness.Location = new System.Drawing.Point(157, 351);
-            this.cbIsBusiness.Margin = new System.Windows.Forms.Padding(4);
+            this.cbIsBusiness.Location = new System.Drawing.Point(118, 285);
             this.cbIsBusiness.Name = "cbIsBusiness";
-            this.cbIsBusiness.Size = new System.Drawing.Size(96, 27);
+            this.cbIsBusiness.Size = new System.Drawing.Size(79, 21);
             this.cbIsBusiness.TabIndex = 10;
             this.cbIsBusiness.Text = "Business";
             this.cbIsBusiness.UseVisualStyleBackColor = true;
@@ -96,10 +94,9 @@
             // 
             this.lblCheckboxes.AutoSize = true;
             this.lblCheckboxes.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCheckboxes.Location = new System.Drawing.Point(4, 351);
-            this.lblCheckboxes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCheckboxes.Location = new System.Drawing.Point(3, 285);
             this.lblCheckboxes.Name = "lblCheckboxes";
-            this.lblCheckboxes.Size = new System.Drawing.Size(145, 23);
+            this.lblCheckboxes.Size = new System.Drawing.Size(116, 17);
             this.lblCheckboxes.TabIndex = 9;
             this.lblCheckboxes.Text = "Customer Status: ";
             // 
@@ -110,10 +107,9 @@
             this.btnInsert.FlatAppearance.BorderSize = 0;
             this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsert.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.btnInsert.Location = new System.Drawing.Point(0, 595);
-            this.btnInsert.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInsert.Location = new System.Drawing.Point(0, 483);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(327, 54);
+            this.btnInsert.Size = new System.Drawing.Size(245, 44);
             this.btnInsert.TabIndex = 6;
             this.btnInsert.Text = "Insert";
             this.btnInsert.UseVisualStyleBackColor = false;
@@ -126,10 +122,9 @@
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.Location = new System.Drawing.Point(0, 649);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Location = new System.Drawing.Point(0, 527);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(327, 54);
+            this.btnDelete.Size = new System.Drawing.Size(245, 44);
             this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -142,10 +137,9 @@
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.Location = new System.Drawing.Point(0, 703);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Location = new System.Drawing.Point(0, 571);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(327, 54);
+            this.btnCancel.Size = new System.Drawing.Size(245, 44);
             this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -154,80 +148,72 @@
             // tbEmail
             // 
             this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.Location = new System.Drawing.Point(4, 288);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.tbEmail.Location = new System.Drawing.Point(3, 234);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(317, 29);
+            this.tbEmail.Size = new System.Drawing.Size(239, 25);
             this.tbEmail.TabIndex = 3;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(4, 264);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmail.Location = new System.Drawing.Point(3, 214);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(59, 23);
+            this.lblEmail.Size = new System.Drawing.Size(45, 17);
             this.lblEmail.TabIndex = 0;
             this.lblEmail.Text = "E-Mail";
             // 
             // tbPhoneNumber
             // 
             this.tbPhoneNumber.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPhoneNumber.Location = new System.Drawing.Point(4, 207);
-            this.tbPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPhoneNumber.Location = new System.Drawing.Point(3, 168);
             this.tbPhoneNumber.Name = "tbPhoneNumber";
-            this.tbPhoneNumber.Size = new System.Drawing.Size(317, 29);
+            this.tbPhoneNumber.Size = new System.Drawing.Size(239, 25);
             this.tbPhoneNumber.TabIndex = 2;
             // 
             // lblPhoneNumber
             // 
             this.lblPhoneNumber.AutoSize = true;
             this.lblPhoneNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNumber.Location = new System.Drawing.Point(4, 182);
-            this.lblPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(3, 148);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(127, 23);
+            this.lblPhoneNumber.Size = new System.Drawing.Size(101, 17);
             this.lblPhoneNumber.TabIndex = 7;
             this.lblPhoneNumber.Text = "Phone Number";
             // 
             // tbCustomerAddress
             // 
             this.tbCustomerAddress.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCustomerAddress.Location = new System.Drawing.Point(4, 126);
-            this.tbCustomerAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.tbCustomerAddress.Location = new System.Drawing.Point(3, 102);
             this.tbCustomerAddress.Name = "tbCustomerAddress";
-            this.tbCustomerAddress.Size = new System.Drawing.Size(317, 29);
+            this.tbCustomerAddress.Size = new System.Drawing.Size(239, 25);
             this.tbCustomerAddress.TabIndex = 1;
             // 
             // lblCustomerAddress
             // 
             this.lblCustomerAddress.AutoSize = true;
             this.lblCustomerAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerAddress.Location = new System.Drawing.Point(4, 101);
-            this.lblCustomerAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCustomerAddress.Location = new System.Drawing.Point(3, 82);
             this.lblCustomerAddress.Name = "lblCustomerAddress";
-            this.lblCustomerAddress.Size = new System.Drawing.Size(149, 23);
+            this.lblCustomerAddress.Size = new System.Drawing.Size(120, 17);
             this.lblCustomerAddress.TabIndex = 6;
             this.lblCustomerAddress.Text = "Customer Address";
             // 
             // tbCustomerName
             // 
             this.tbCustomerName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCustomerName.Location = new System.Drawing.Point(4, 45);
-            this.tbCustomerName.Margin = new System.Windows.Forms.Padding(4);
+            this.tbCustomerName.Location = new System.Drawing.Point(3, 37);
             this.tbCustomerName.Name = "tbCustomerName";
-            this.tbCustomerName.Size = new System.Drawing.Size(317, 29);
+            this.tbCustomerName.Size = new System.Drawing.Size(239, 25);
             this.tbCustomerName.TabIndex = 0;
             // 
             // lblCustomerName
             // 
             this.lblCustomerName.AutoSize = true;
             this.lblCustomerName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerName.Location = new System.Drawing.Point(4, 20);
-            this.lblCustomerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCustomerName.Location = new System.Drawing.Point(3, 16);
             this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(135, 23);
+            this.lblCustomerName.Size = new System.Drawing.Size(107, 17);
             this.lblCustomerName.TabIndex = 1;
             this.lblCustomerName.Text = "Customer Name";
             // 
@@ -237,10 +223,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panDGV.Controls.Add(this.dgvCustomer);
-            this.panDGV.Location = new System.Drawing.Point(329, 0);
-            this.panDGV.Margin = new System.Windows.Forms.Padding(4);
+            this.panDGV.Location = new System.Drawing.Point(247, 0);
             this.panDGV.Name = "panDGV";
-            this.panDGV.Size = new System.Drawing.Size(1010, 757);
+            this.panDGV.Size = new System.Drawing.Size(758, 615);
             this.panDGV.TabIndex = 3;
             // 
             // dgvCustomer
@@ -259,11 +244,10 @@
             this.cbcIsBusiness});
             this.dgvCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCustomer.Location = new System.Drawing.Point(0, 0);
-            this.dgvCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.ReadOnly = true;
             this.dgvCustomer.RowHeadersWidth = 51;
-            this.dgvCustomer.Size = new System.Drawing.Size(1010, 757);
+            this.dgvCustomer.Size = new System.Drawing.Size(758, 615);
             this.dgvCustomer.TabIndex = 14;
             this.dgvCustomer.DoubleClick += new System.EventHandler(this.dgvCustomer_DoubleClick);
             // 
@@ -320,14 +304,15 @@
             // 
             // FormCustomers_EF
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(1339, 757);
+            this.ClientSize = new System.Drawing.Size(1004, 615);
             this.Controls.Add(this.panDGV);
             this.Controls.Add(this.panCRUD);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormCustomers_EF";
-            this.Text = "FormCustomers_EF";
+            this.Text = "CUSTOMERS";
             this.Load += new System.EventHandler(this.FormCustomers_EF_Load);
             this.panCRUD.ResumeLayout(false);
             this.panCRUD.PerformLayout();

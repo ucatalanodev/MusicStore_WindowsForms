@@ -10,7 +10,14 @@ namespace MusicStore_App2.Forms
         public FormLogin()
         {
             InitializeComponent();
+
+            // The underscore before a variable name is a common convention in C# to indicate that the variable is a private field of a class.
             _db = new MusicStoreEntities();
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            btnMaximize.Enabled = false;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -69,6 +76,15 @@ namespace MusicStore_App2.Forms
             {
 
                 MessageBox.Show("Something went wrong, please try again.");
+            }
+        }
+
+        private void tbAny_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                btnLogin.PerformClick();
             }
         }
     }

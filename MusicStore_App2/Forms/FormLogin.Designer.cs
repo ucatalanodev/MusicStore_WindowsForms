@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblLogo = new System.Windows.Forms.Label();
-            this.btnPasswordReset = new System.Windows.Forms.Button();
-            this.btnSignUp = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
@@ -48,9 +47,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.btnPasswordReset);
-            this.panel1.Controls.Add(this.btnSignUp);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.lblPassword);
             this.panel1.Controls.Add(this.lblUsername);
@@ -62,6 +60,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(718, 562);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(0, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(718, 80);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "MUSIC STORE";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -137,42 +148,16 @@
             this.lblLogo.Name = "lblLogo";
             this.lblLogo.Size = new System.Drawing.Size(718, 80);
             this.lblLogo.TabIndex = 0;
-            this.lblLogo.Text = "MUSIC STORE";
+            this.lblLogo.Text = "LOGIN";
             this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnPasswordReset
-            // 
-            this.btnPasswordReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPasswordReset.FlatAppearance.BorderSize = 0;
-            this.btnPasswordReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPasswordReset.ForeColor = System.Drawing.Color.White;
-            this.btnPasswordReset.Location = new System.Drawing.Point(223, 421);
-            this.btnPasswordReset.Name = "btnPasswordReset";
-            this.btnPasswordReset.Size = new System.Drawing.Size(262, 38);
-            this.btnPasswordReset.TabIndex = 4;
-            this.btnPasswordReset.Text = "Forgot your password?";
-            this.btnPasswordReset.UseVisualStyleBackColor = true;
-            // 
-            // btnSignUp
-            // 
-            this.btnSignUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSignUp.FlatAppearance.BorderSize = 0;
-            this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignUp.ForeColor = System.Drawing.Color.White;
-            this.btnSignUp.Location = new System.Drawing.Point(223, 366);
-            this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(262, 38);
-            this.btnSignUp.TabIndex = 3;
-            this.btnSignUp.Text = "SIGN UP";
-            this.btnSignUp.UseVisualStyleBackColor = true;
             // 
             // btnLogin
             // 
-            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(223, 311);
+            this.btnLogin.Location = new System.Drawing.Point(230, 400);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(262, 38);
             this.btnLogin.TabIndex = 2;
@@ -182,10 +167,10 @@
             // 
             // lblPassword
             // 
-            this.lblPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblPassword.AutoSize = true;
             this.lblPassword.ForeColor = System.Drawing.Color.White;
-            this.lblPassword.Location = new System.Drawing.Point(223, 235);
+            this.lblPassword.Location = new System.Drawing.Point(230, 324);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(66, 17);
             this.lblPassword.TabIndex = 0;
@@ -193,10 +178,10 @@
             // 
             // lblUsername
             // 
-            this.lblUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUsername.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblUsername.AutoSize = true;
             this.lblUsername.ForeColor = System.Drawing.Color.White;
-            this.lblUsername.Location = new System.Drawing.Point(223, 180);
+            this.lblUsername.Location = new System.Drawing.Point(230, 269);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(69, 17);
             this.lblUsername.TabIndex = 0;
@@ -204,20 +189,22 @@
             // 
             // tbPassword
             // 
-            this.tbPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbPassword.Location = new System.Drawing.Point(223, 255);
+            this.tbPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbPassword.Location = new System.Drawing.Point(230, 344);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(262, 25);
             this.tbPassword.TabIndex = 1;
+            this.tbPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbAny_KeyDown);
             // 
             // tbUsername
             // 
-            this.tbUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbUsername.Location = new System.Drawing.Point(223, 199);
+            this.tbUsername.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbUsername.Location = new System.Drawing.Point(230, 288);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(262, 25);
             this.tbUsername.TabIndex = 0;
+            this.tbUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbAny_KeyDown);
             // 
             // FormLogin
             // 
@@ -229,6 +216,7 @@
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -240,8 +228,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnPasswordReset;
-        private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUsername;
@@ -251,5 +237,6 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnMaximize;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label1;
     }
 }
