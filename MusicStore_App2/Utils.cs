@@ -18,6 +18,7 @@ namespace MusicStore_App2
             //Loop through each byte of the hased data and format each one as hexadecimal string.
             for (int i = 0; i < data.Length; i++)
             {
+                //This expression formats each byte in the data array as a two-character wide hexadecimal string ("x2").
                 sBuilder.Append(data[i].ToString("x2"));
             }
 

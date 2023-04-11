@@ -59,10 +59,10 @@ namespace MusicStore_App2.Forms
                     db.Users.Add(user);
 
                     // Create a new UsersRole object and add it to the database
-                    UsersRole userRole = new UsersRole();
-                    userRole.userid = user.id;
-                    userRole.roleid = roleid;
-                    db.UsersRole.Add(userRole);
+                    UsersRole usersRole = new UsersRole();
+                    usersRole.userid = user.id;
+                    usersRole.roleid = roleid;
+                    db.UsersRole.Add(usersRole);
 
                     db.SaveChanges();
                     MessageBox.Show("Entry successfully inserted.");
@@ -117,14 +117,14 @@ namespace MusicStore_App2.Forms
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to delete this user?", "Delete database entry", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure you want to delete this user?", "Delete database user", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 using (MusicStoreEntities db = new MusicStoreEntities())
                 {
                     // Delete the associated UsersRole records
-                    var userRoles = db.UsersRole.Where(ur => ur.userid == user.id).ToList();
+                    var usersRole = db.UsersRole.Where(ur => ur.userid == user.id).ToList();
 
-                    db.UsersRole.RemoveRange(userRoles);
+                    db.UsersRole.RemoveRange(usersRole);
 
                     // Delete the User record
                     var entry = db.Entry(user);
