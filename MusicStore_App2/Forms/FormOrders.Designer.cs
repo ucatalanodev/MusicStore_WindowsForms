@@ -52,6 +52,7 @@
             this.dgvOrder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvOrder.Location = new System.Drawing.Point(0, 0);
             this.dgvOrder.Name = "dgvOrder";
+            this.dgvOrder.ReadOnly = true;
             this.dgvOrder.Size = new System.Drawing.Size(1012, 552);
             this.dgvOrder.TabIndex = 13;
             this.dgvOrder.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellValueChanged);
@@ -71,6 +72,7 @@
             this.tbcAlbumID.DataPropertyName = "album_id";
             this.tbcAlbumID.HeaderText = "Album ID";
             this.tbcAlbumID.Name = "tbcAlbumID";
+            this.tbcAlbumID.ReadOnly = true;
             this.tbcAlbumID.Width = 257;
             // 
             // tbcCustomerID
@@ -78,18 +80,21 @@
             this.tbcCustomerID.DataPropertyName = "customer_id";
             this.tbcCustomerID.HeaderText = "Customer ID";
             this.tbcCustomerID.Name = "tbcCustomerID";
+            this.tbcCustomerID.ReadOnly = true;
             // 
             // tbcPurchasedAmount
             // 
             this.tbcPurchasedAmount.DataPropertyName = "purchased_amount";
             this.tbcPurchasedAmount.HeaderText = "Amount";
             this.tbcPurchasedAmount.Name = "tbcPurchasedAmount";
+            this.tbcPurchasedAmount.ReadOnly = true;
             // 
             // tbcTotalPaid
             // 
             this.tbcTotalPaid.DataPropertyName = "total_paid";
             this.tbcTotalPaid.HeaderText = "Total Paid";
             this.tbcTotalPaid.Name = "tbcTotalPaid";
+            this.tbcTotalPaid.ReadOnly = true;
             // 
             // FormOrders
             // 

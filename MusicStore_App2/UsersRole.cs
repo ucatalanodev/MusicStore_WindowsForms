@@ -12,12 +12,13 @@ namespace MusicStore_App2
     using System;
     using System.Collections.Generic;
     
-    public partial class Business
+    public partial class UsersRole
     {
-        public long business_id { get; set; }
-        public long customer_id { get; set; }
-        public string vat_number { get; set; }
+        public int id { get; set; }
+        public int userid { get; set; }
+        public int roleid { get; set; }
     
-        public virtual Customer Customer { get; set; }
+        public virtual Role Role { get; set; }
+        public virtual User User { get; set; }
     }
 }

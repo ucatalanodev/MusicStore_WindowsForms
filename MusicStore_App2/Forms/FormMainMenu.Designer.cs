@@ -1,4 +1,4 @@
-﻿namespace MusicStore_App2
+﻿namespace MusicStore_App2.Forms
 {
     partial class FormMainMenu
     {
@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnManageUsers = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.btnOrders = new System.Windows.Forms.Button();
             this.btnCustomers = new System.Windows.Forms.Button();
             this.btnAlbums = new System.Windows.Forms.Button();
@@ -49,6 +51,8 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.btnManageUsers);
+            this.panelMenu.Controls.Add(this.btnLogout);
             this.panelMenu.Controls.Add(this.btnOrders);
             this.panelMenu.Controls.Add(this.btnCustomers);
             this.panelMenu.Controls.Add(this.btnAlbums);
@@ -59,6 +63,40 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 642);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnManageUsers
+            // 
+            this.btnManageUsers.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnManageUsers.FlatAppearance.BorderSize = 0;
+            this.btnManageUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageUsers.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.btnManageUsers.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnManageUsers.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnManageUsers.Location = new System.Drawing.Point(0, 482);
+            this.btnManageUsers.Name = "btnManageUsers";
+            this.btnManageUsers.Size = new System.Drawing.Size(220, 80);
+            this.btnManageUsers.TabIndex = 6;
+            this.btnManageUsers.Text = "Manage Users";
+            this.btnManageUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnManageUsers.UseVisualStyleBackColor = true;
+            this.btnManageUsers.Click += new System.EventHandler(this.btnManageUsers_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.btnLogout.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(0, 562);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(220, 80);
+            this.btnLogout.TabIndex = 5;
+            this.btnLogout.Text = "LOGOUT";
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnOrders
             // 
@@ -261,6 +299,7 @@
             this.Name = "FormMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormMainMenu_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
@@ -284,6 +323,8 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnLogo;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnManageUsers;
     }
 }
 

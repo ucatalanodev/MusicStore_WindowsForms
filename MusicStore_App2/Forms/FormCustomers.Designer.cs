@@ -54,6 +54,7 @@
             this.dgvCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCustomer.Location = new System.Drawing.Point(0, 0);
             this.dgvCustomer.Name = "dgvCustomer";
+            this.dgvCustomer.ReadOnly = true;
             this.dgvCustomer.Size = new System.Drawing.Size(1012, 552);
             this.dgvCustomer.TabIndex = 13;
             this.dgvCustomer.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellValueChanged);
@@ -73,6 +74,7 @@
             this.tbcCustomerName.DataPropertyName = "customer_name";
             this.tbcCustomerName.HeaderText = "Customer Name";
             this.tbcCustomerName.Name = "tbcCustomerName";
+            this.tbcCustomerName.ReadOnly = true;
             this.tbcCustomerName.Width = 257;
             // 
             // tbcCustomerAddress
@@ -80,32 +82,36 @@
             this.tbcCustomerAddress.DataPropertyName = "customer_address";
             this.tbcCustomerAddress.HeaderText = "Customer Address";
             this.tbcCustomerAddress.Name = "tbcCustomerAddress";
+            this.tbcCustomerAddress.ReadOnly = true;
             // 
             // tbcPhoneNumber
             // 
             this.tbcPhoneNumber.DataPropertyName = "phone_number";
             this.tbcPhoneNumber.HeaderText = "Phone Number";
             this.tbcPhoneNumber.Name = "tbcPhoneNumber";
+            this.tbcPhoneNumber.ReadOnly = true;
             // 
             // tbcEmail
             // 
             this.tbcEmail.DataPropertyName = "email";
             this.tbcEmail.HeaderText = "E-Mail";
             this.tbcEmail.Name = "tbcEmail";
+            this.tbcEmail.ReadOnly = true;
             // 
             // cbcIsBusiness
             // 
             this.cbcIsBusiness.DataPropertyName = "is_business";
             this.cbcIsBusiness.HeaderText = "Business";
             this.cbcIsBusiness.Name = "cbcIsBusiness";
+            this.cbcIsBusiness.ReadOnly = true;
             // 
-            // FormCustomer
+            // FormCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1012, 552);
             this.Controls.Add(this.dgvCustomer);
-            this.Name = "FormCustomer";
+            this.Name = "FormCustomers";
             this.Text = "CUSTOMERS";
             this.Load += new System.EventHandler(this.FormCustomers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();

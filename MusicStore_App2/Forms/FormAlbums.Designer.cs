@@ -56,6 +56,7 @@
             this.dgvAlbum.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAlbum.Location = new System.Drawing.Point(0, 0);
             this.dgvAlbum.Name = "dgvAlbum";
+            this.dgvAlbum.ReadOnly = true;
             this.dgvAlbum.Size = new System.Drawing.Size(1012, 552);
             this.dgvAlbum.TabIndex = 13;
             this.dgvAlbum.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlbum_CellValueChanged);
@@ -75,30 +76,35 @@
             this.tbcArtistID.DataPropertyName = "artist_id";
             this.tbcArtistID.HeaderText = "Artist ID";
             this.tbcArtistID.Name = "tbcArtistID";
+            this.tbcArtistID.ReadOnly = true;
             // 
             // tbcAlbumTitle
             // 
             this.tbcAlbumTitle.DataPropertyName = "album_title";
             this.tbcAlbumTitle.HeaderText = "Album Title";
             this.tbcAlbumTitle.Name = "tbcAlbumTitle";
+            this.tbcAlbumTitle.ReadOnly = true;
             // 
             // tbcGenre
             // 
             this.tbcGenre.DataPropertyName = "genre";
             this.tbcGenre.HeaderText = "Genre";
             this.tbcGenre.Name = "tbcGenre";
+            this.tbcGenre.ReadOnly = true;
             // 
             // tbcPublYear
             // 
             this.tbcPublYear.DataPropertyName = "publ_year";
             this.tbcPublYear.HeaderText = "Publication Year";
             this.tbcPublYear.Name = "tbcPublYear";
+            this.tbcPublYear.ReadOnly = true;
             // 
             // tbcRecordLabel
             // 
             this.tbcRecordLabel.DataPropertyName = "record_label";
             this.tbcRecordLabel.HeaderText = "Record Label";
             this.tbcRecordLabel.Name = "tbcRecordLabel";
+            this.tbcRecordLabel.ReadOnly = true;
             this.tbcRecordLabel.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.tbcRecordLabel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
@@ -107,6 +113,7 @@
             this.tbcPrice.DataPropertyName = "price";
             this.tbcPrice.HeaderText = "Price";
             this.tbcPrice.Name = "tbcPrice";
+            this.tbcPrice.ReadOnly = true;
             this.tbcPrice.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.tbcPrice.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 

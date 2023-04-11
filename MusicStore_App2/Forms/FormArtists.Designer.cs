@@ -56,6 +56,7 @@
             this.dgvArtist.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvArtist.Location = new System.Drawing.Point(0, 0);
             this.dgvArtist.Name = "dgvArtist";
+            this.dgvArtist.ReadOnly = true;
             this.dgvArtist.Size = new System.Drawing.Size(1012, 552);
             this.dgvArtist.TabIndex = 13;
             this.dgvArtist.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArtist_CellValueChanged);
@@ -75,6 +76,7 @@
             this.tbcArtistName.DataPropertyName = "artist_name";
             this.tbcArtistName.HeaderText = "Artist Name";
             this.tbcArtistName.Name = "tbcArtistName";
+            this.tbcArtistName.ReadOnly = true;
             this.tbcArtistName.Width = 257;
             // 
             // tbcArtistOrigin
@@ -82,30 +84,35 @@
             this.tbcArtistOrigin.DataPropertyName = "artist_origin";
             this.tbcArtistOrigin.HeaderText = "Artist Origin";
             this.tbcArtistOrigin.Name = "tbcArtistOrigin";
+            this.tbcArtistOrigin.ReadOnly = true;
             // 
             // tbcWebsite
             // 
             this.tbcWebsite.DataPropertyName = "website";
             this.tbcWebsite.HeaderText = "Website";
             this.tbcWebsite.Name = "tbcWebsite";
+            this.tbcWebsite.ReadOnly = true;
             // 
             // tbcSocial
             // 
             this.tbcSocial.DataPropertyName = "social";
             this.tbcSocial.HeaderText = "Instagram";
             this.tbcSocial.Name = "tbcSocial";
+            this.tbcSocial.ReadOnly = true;
             // 
             // cbcIsBand
             // 
             this.cbcIsBand.DataPropertyName = "is_band";
             this.cbcIsBand.HeaderText = "Band";
             this.cbcIsBand.Name = "cbcIsBand";
+            this.cbcIsBand.ReadOnly = true;
             // 
             // cbcIsActive
             // 
             this.cbcIsActive.DataPropertyName = "is_active";
             this.cbcIsActive.HeaderText = "Active";
             this.cbcIsActive.Name = "cbcIsActive";
+            this.cbcIsActive.ReadOnly = true;
             // 
             // FormArtists
             // 

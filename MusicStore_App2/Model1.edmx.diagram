@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dd5ce2542f4042f0851e4edc38a780bb" Name="Diagram1">
+        <EntityTypeShape EntityType="MusicStoreModel.Album" Width="1.5" PointX="5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="MusicStoreModel.Artist" Width="1.5" PointX="2.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="MusicStoreModel.Customer" Width="1.5" PointX="5" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MusicStoreModel.Purchase" Width="1.5" PointX="7.25" PointY="4.125" IsExpanded="true" />
+        <AssociationConnector Association="MusicStoreModel.FK_Album_Artist" ManuallyRouted="false" />
+        <AssociationConnector Association="MusicStoreModel.FK_Purchase_Album" ManuallyRouted="false" />
+        <AssociationConnector Association="MusicStoreModel.FK_Purchase_Customer" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MusicStoreModel.Role" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MusicStoreModel.User" Width="1.5" PointX="7.25" PointY="0.75" />
+        <EntityTypeShape EntityType="MusicStoreModel.UsersRole" Width="1.5" PointX="5" PointY="0.625" />
+        <AssociationConnector Association="MusicStoreModel.FK_UserRoles_Roles" />
+        <AssociationConnector Association="MusicStoreModel.FK_UserRoles_Users" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

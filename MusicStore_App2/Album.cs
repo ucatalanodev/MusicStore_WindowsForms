@@ -18,7 +18,6 @@ namespace MusicStore_App2
         public Album()
         {
             this.Purchases = new HashSet<Purchase>();
-            this.Songs = new HashSet<Song>();
         }
     
         public long album_id { get; set; }
@@ -32,7 +31,5 @@ namespace MusicStore_App2
         public virtual Artist Artist { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Purchase> Purchases { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Song> Songs { get; set; }
     }
 }

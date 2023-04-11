@@ -1,39 +1,30 @@
 ﻿using System;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
-namespace MusicStore_App2
+namespace MusicStore_App2.Forms
 {
     public partial class FormMainMenu : Form
     {
         //Fields
         private Button currentButton;
-        //Random random;
-        //private int tempIndex;
         private Form activeForm;
+        public User _user;
+        public string _roleName;
 
-        //Constructor
+        //Constructors
         public FormMainMenu()
         {
             InitializeComponent();
-            //random = new Random();
         }
 
-        //Methods
-        //private Color SelectThemeColor()
-        //{
-        //    int index = random.Next(ThemeColor.ColorList.Count);
-
-        //    while (tempIndex == index)
-        //    {
-        //        index = random.Next(ThemeColor.ColorList.Count);
-        //    }
-
-        //    tempIndex = index;
-        //    string color = ThemeColor.ColorList[index];
-
-        //    return ColorTranslator.FromHtml(color);
-        //}
+        public FormMainMenu(User user)
+        {
+            InitializeComponent();
+            _user = user;
+            _roleName = user.UsersRoles.FirstOrDefault().Role.shortname;
+        }
 
         private void ActivateButton(object btnSender)
         {
@@ -43,19 +34,8 @@ namespace MusicStore_App2
                 {
                     DisableButton();
 
-                    //Color color = SelectThemeColor();
-
                     currentButton = (Button)btnSender;
-                    //currentButton.BackColor = color;
-                    //currentButton.ForeColor = Color.White;
-                    currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.0F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
-                    ////Changes logo-title panels color according to the color displayed on the selected button
-                    //panelTitleBar.BackColor = color;
-                    //panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
-
-                    //ThemeColor.PrimaryColor = color;
-                    //ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                    currentButton.Font = new System.Drawing.Font("Segoe UI Semibold", 13.0F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
             }
         }
@@ -136,26 +116,74 @@ namespace MusicStore_App2
 
         private void btnArtists_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new Forms.FormArtists(), sender);
-            OpenChildForm(new Forms.FormArtists_EF(), sender);
+            if (_roleName == "vo")
+            {
+                OpenChildForm(new Forms.FormArtists(), sender);
+            }
+
+            else
+            {
+                OpenChildForm(new Forms.FormArtists_EF(), sender);
+            }
         }
 
         private void btnAlbums_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new Forms.FormAlbums(), sender);
-            OpenChildForm(new Forms.FormAlbums_EF(), sender);
+            if (_roleName == "vo")
+            {
+                OpenChildForm(new Forms.FormAlbums(), sender);
+            }
+
+            else
+            {
+                OpenChildForm(new Forms.FormAlbums_EF(), sender);
+            }
         }
 
         private void btnCustomers_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new Forms.FormCustomers(), sender);
-            OpenChildForm(new Forms.FormCustomers_EF(), sender);
+            if (_roleName == "vo")
+            {
+                OpenChildForm(new Forms.FormCustomers(), sender);
+            }
+
+            else
+            {
+                OpenChildForm(new Forms.FormCustomers_EF(), sender);
+            }
         }
 
         private void btnOrders_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new Forms.FormOrders(), sender);
-            OpenChildForm(new Forms.FormOrders_EF(), sender);
+            if (_roleName == "vo")
+            {
+                OpenChildForm(new Forms.FormOrders(), sender);
+            }
+
+            else
+            {
+                OpenChildForm(new Forms.FormOrders_EF(), sender);
+            }
+        }
+
+        private void btnManageUsers_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormManageUsers_EF(), sender);
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            var formLogin = new FormLogin();
+            formLogin.Show();
+            Hide();
+        }
+
+        private void FormMainMenu_Load(object sender, EventArgs e)
+        {
+            if (_roleName != "admin")
+            {
+                btnManageUsers.Visible = false;
+            }
         }
     }
 }

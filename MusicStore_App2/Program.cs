@@ -13,7 +13,8 @@ namespace MusicStore_App2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMainMenu());
+            //Application.Run(new Forms.FormMainMenu());
+            Application.Run(new Forms.FormLogin());
         }
     }
 }

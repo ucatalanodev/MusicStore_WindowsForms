@@ -12,23 +12,19 @@ namespace MusicStore_App2
     using System;
     using System.Collections.Generic;
     
-    public partial class Artist
+    public partial class Role
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Artist()
+        public Role()
         {
-            this.Albums = new HashSet<Album>();
+            this.UsersRoles = new HashSet<UsersRole>();
         }
     
-        public long artist_id { get; set; }
-        public string artist_name { get; set; }
-        public string artist_origin { get; set; }
-        public string website { get; set; }
-        public string social { get; set; }
-        public bool is_band { get; set; }
-        public bool is_active { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string shortname { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Album> Albums { get; set; }
+        public virtual ICollection<UsersRole> UsersRoles { get; set; }
     }
 }
