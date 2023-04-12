@@ -46,7 +46,7 @@ namespace MusicStore_App2.Forms
         private void btnInsert_Click(object sender, EventArgs e)
         {
             user.username = tbUsername.Text.Trim();
-            user.password = Utils.HashPassword(tbPassword.Text.Trim());
+            user.password = Utils.HashPassword(tbPassword.Text);
             user.is_active = cbIsActive.Checked;
 
             // Get the selected role ID from the ComboBox
